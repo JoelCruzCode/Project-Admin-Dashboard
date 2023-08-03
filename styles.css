@@ -1,6 +1,6 @@
 :root {
-  height: 100vh;
-  height: 100svh;
+  /* height: 100vh;
+  height: 100svh; */
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -18,8 +18,8 @@ hr {
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 5fr 0.5fr;
-  height: 100svh;
+  /* grid-template-rows: 1fr 5fr 0.5fr; */
+  /* height: 100svh; */
 }
 
 .header {
@@ -79,25 +79,45 @@ hr {
 }
 
 .sidebar {
+  padding-top: 30px;
+  padding-left: 50px;
   background-color: aquamarine;
   grid-column: 1 / 2;
   grid-row: 1 / 4;
   display: grid;
   grid-template-rows: 5rem 1fr 1.5fr;
 }
-.logo {
+.logo,
+.icon {
+  display: flex;
+  gap: 30px;
+  align-items: center;
   font-size: 2rem;
 }
 
+.logo * {
+  margin: 0px;
+}
+
+/* .logo > span {
+  font-size: 4rem;
+  color: #888;
+} */
+
+.icon {
+  font-size: 1.5rem;
+}
+
 .side-1 {
+  padding-top: 50px;
   display: grid;
-  gap: 1.25rem;
+  gap: 2rem;
   align-content: flex-start;
 }
 
 .side-2 {
   display: grid;
-  gap: 1.25rem;
+  gap: 2rem;
   align-content: flex-start;
 }
 
@@ -193,6 +213,25 @@ hr {
   display: flex;
   gap: 2rem;
   /* height: 100px; */
+}
+
+/* Symbols */
+
+/* span {
+  font-size: 80px !important;
+} */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.logo > .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 4rem;
+  color: #888;
+}
+
+.icon > .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 /* xs */
